@@ -1,13 +1,16 @@
 import React from 'react';
-import "./logo.scss";
+import BrainFlixLogo from '../../assets/logo/BrainFlix-logo.svg';
 
-function logo(){
+function Logo(){
     return(
-        <>
-            <img scr="BrainFlix-logo.svg" alt="Logo images" />
+        <>  
+            <img src={BrainFlixLogo} alt="Logo image" />
             <h1>test</h1>
+            <p>testing </p>
+            <p>testing 12</p>
         </>
     );
 }
 
 export default Logo;
+
