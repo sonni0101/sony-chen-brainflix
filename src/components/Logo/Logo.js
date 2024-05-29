@@ -5,9 +5,6 @@ function Logo(){
     return(
         <>  
             <img src={BrainFlixLogo} alt="Logo image" />
-            <h1>test</h1>
-            <p>testing </p>
-            <p>testing 12</p>
         </>
     );
 }
