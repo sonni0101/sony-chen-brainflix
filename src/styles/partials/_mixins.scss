@@ -1,0 +1,30 @@
+// Desktop and tablet font size 
+@mixin desktop-tablet-page-header{
+    font-size: 2.0625rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+}
+
+@mixin desktop-tablet-section-header{
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+}
+
+@mixin desktop-tablet-subheader{
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    font-weight: 700;
+}
+
+@mixin desktop-tablet-body{
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    font-weight: 400;
+}
+
+@mixin desktop-tablet-button{
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+    font-weight: 700;
+}

@@ -4,9 +4,9 @@ import SearchIcon from '../../assets/icons/search.svg';
 
 function SearchBar(){
     return(
-        <>
-            <input />
-        </>
+        <form>
+            <input className='search-bar' placeholder="Search" type="text" name="Search" />
+        </form>
     );
 }
 

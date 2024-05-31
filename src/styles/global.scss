@@ -18,3 +18,23 @@
     src: url(../assets/fonts/AvenirNextLTPro-Bold.otf);
     font-weight: 700;
 }
+
+body {
+    font-family: 'Avenir Next LT Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// breakpoints 
+@mixin desktop{
+    @media screen and (min-width: $desktop-breakpoint){
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media screen and (min-width:#{$tablet-min-breakpoint}) and (max-width: #{$tablet-max-breakpoint}) {
+        @content;
+    }
+}
