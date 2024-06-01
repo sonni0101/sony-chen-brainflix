@@ -1,0 +1,82 @@
+@import '../../styles/global.scss';
+
+.video-detail{
+
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-8;
+    padding: $spacing-16;
+
+    @include desktop{
+        padding: 0;
+    }
+
+    @include tablet{
+        padding: 0;
+    }
+
+    &__info-group{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: $spacing-8 0;
+        border-bottom: 1px solid $divider;
+    }
+
+    &__left-panel{
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-16;
+
+        @include desktop{
+            display: flex;
+            flex-direction: row;
+            gap: $spacing-24;
+        }
+
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            gap: $spacing-24;
+        }
+
+        &--name{
+            @include mobile-subheader;
+
+            @include desktop{
+                @include desktop-tablet-subheader;
+            }
+
+            @include tablet{
+                @include desktop-tablet-subheader;
+            }
+        }
+
+        &--date{
+            color: $text-label;
+        }
+    }
+
+    &__right-panel{
+        display: flex;
+        flex-direction: column;
+        color: $text-label;
+        gap: $spacing-16;
+
+        @include desktop{
+            display: flex;
+            flex-direction: row;
+            gap: $spacing-24;
+        }
+
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            gap: $spacing-24;
+        }
+    }
+
+    &__description{
+        padding: $spacing-16 0;
+    }
+}

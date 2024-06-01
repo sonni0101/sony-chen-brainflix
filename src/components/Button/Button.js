@@ -5,7 +5,7 @@ function Button({icon, text}){
     return(
         <button className='primary-button'>
             <img src={icon} alt="Button icon" className='primary-button__icon' />
-            {text}
+            <p className='primary-button__text'>{text}</p>
         </button>
     );
 }

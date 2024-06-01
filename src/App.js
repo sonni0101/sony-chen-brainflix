@@ -1,12 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-import Logo from './components/Logo/Logo.js';
 import Header from './components/Header/Header.js';
+import VideoPlayer from './components/VideoPlayer/VideoPlayer.js';
+import VideoDetails from './components/VideoDetails/VideoDetails.js';
 
 function App() {
   return (
     <>
       <Header />
+      <VideoPlayer />
+      <VideoDetails />
     </>
   );
 }

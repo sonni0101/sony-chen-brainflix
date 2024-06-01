@@ -12,4 +12,54 @@
   font-family: "Avenir Next LT Pro";
   src: url(../assets/fonts/AvenirNextLTPro-Bold.otf);
   font-weight: 700;
+}
+h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width: 1280px) {
+  h1 {
+    font-size: 2.0625rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  h1 {
+    font-size: 2.0625rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+  }
+}
+
+p {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width: 1280px) {
+  p {
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  p {
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    font-weight: 400;
+  }
+}
+
+body {
+  font-family: "Avenir Next LT Pro", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }/*# sourceMappingURL=global.css.map */

@@ -2,11 +2,11 @@ import React from "react";
 import './profile_pic.scss';
 import ProfilePicImage from '../../assets/images/Mohan-muruge.jpg';
 
-function ProfilePic(){
+function ProfilePic({className}){
     return(
-        <>
-            <img src={ProfilePicImage} alt="User profile image" className="profile-pic" />
-        </>
+        <div className={`profile-pic ${className}`}>
+            <img src={ProfilePicImage} alt="User profile image" className="profile-pic__image" />
+        </div>
     );
 }
 

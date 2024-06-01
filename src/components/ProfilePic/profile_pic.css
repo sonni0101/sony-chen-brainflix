@@ -1,1 +1,9 @@
-/*# sourceMappingURL=profile_pic.css.map */
+.profile-pic {
+  max-width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.profile-pic__image {
+  height: 2.5rem;
+}/*# sourceMappingURL=profile_pic.css.map */

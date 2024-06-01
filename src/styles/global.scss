@@ -19,13 +19,6 @@
     font-weight: 700;
 }
 
-body {
-    font-family: 'Avenir Next LT Pro', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 // breakpoints 
 @mixin desktop{
     @media screen and (min-width: $desktop-breakpoint){
@@ -37,4 +30,40 @@ body {
     @media screen and (min-width:#{$tablet-min-breakpoint}) and (max-width: #{$tablet-max-breakpoint}) {
         @content;
     }
+}
+
+// fonts
+h1{
+    @include mobile-page-header;
+    margin: 0;
+    padding: 0;
+
+    @include desktop {
+        @include desktop-tablet-page-header;
+    }
+
+    @include tablet() {
+        @include desktop-tablet-page-header;
+    }
+}
+
+p{
+    @include mobile-body;
+    margin: 0;
+    padding: 0; 
+
+    @include desktop {
+        @include desktop-tablet-body;
+    }
+
+    @include tablet() {
+        @include desktop-tablet-body;
+    }
+}
+
+body {
+    font-family: 'Avenir Next LT Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }

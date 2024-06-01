@@ -28,3 +28,46 @@
     line-height: 0.75rem;
     font-weight: 700;
 }
+
+@mixin desktop-tablet-label{
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+    font-weight: 700;
+}
+
+// Mobile text font size 
+@mixin mobile-page-header{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+}
+
+@mixin mobile-section-header{
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+}
+
+@mixin mobile-subheader{
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 700;
+}
+
+@mixin mobile-body{
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+}
+
+@mixin mobile-button{
+    font-size: 0.625rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+}
+
+@mixin mobile-label{
+    font-size: 0.625rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+}

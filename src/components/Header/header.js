@@ -4,16 +4,20 @@ import Logo from '../Logo/Logo.js';
 import SearchBar from '../SearchBar/SearchBar.js';
 import ProfilePic from '../ProfilePic/profile_pic.js';
 import Button from '../Button/Button.js';
+import ButtonIcon from '../../assets/icons/upload.svg';
 
 function Header() {
     return (
         <header className="header">
             <nav className="header__section-container">
                 <Logo />
-                <div className='header__right'>
-                    <SearchBar />
-                    <Button />
-                    <ProfilePic />
+                <div className="header__right">
+                    <div className="header__right--mobile">
+                        <SearchBar />
+                        <ProfilePic className="header__profile-pic-mobile" />
+                    </div>
+                    <Button icon={ButtonIcon} text="Upload"/>
+                    <ProfilePic className="header__profile-pic-desktop" />
                 </div>
             </nav>
         </header>

@@ -1,0 +1,7 @@
+@import '../../styles/global.scss';
+
+.inline-icon-text{
+    display: flex;
+    flex-direction: row;
+    gap: $spacing-8;
+}
