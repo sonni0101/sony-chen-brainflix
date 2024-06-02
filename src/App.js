@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header/Header.js';
 import VideoPlayer from './components/VideoPlayer/VideoPlayer.js';
 import VideoDetails from './components/VideoDetails/VideoDetails.js';
+import CommentSection from './components/CommentSection/CommentSection.js';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <VideoPlayer />
       <VideoDetails />
+      <CommentSection />
     </>
   );
 }

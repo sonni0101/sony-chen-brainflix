@@ -62,12 +62,16 @@
     }
 
     &__play{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding: $spacing-4 $spacing-8;
         background-color: rgba($video-button-background, 0.5);
         cursor: pointer;
         border-radius: 0.25rem;
-        margin: auto;
+        margin: 0;
         width: 8px;
+        
 
         @include desktop{
             padding: $spacing-8 $spacing-16;

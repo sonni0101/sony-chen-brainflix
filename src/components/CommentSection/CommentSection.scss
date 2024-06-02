@@ -1,1 +1,66 @@
 @import '../../styles/global.scss';
+
+.comment-section{
+    display: flex;
+    flex-direction: column;
+
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        padding: $spacing-16;
+        gap: $spacing-24;
+    }
+
+    &__add-comment-wrapper{
+        display: flex;
+        flex-direction: row;
+        gap: $spacing-16;
+        box-sizing: border-box;
+
+        @include desktop{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            gap: $spacing-24;
+        }
+
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            gap: $spacing-24;
+        }
+    }
+
+    &__add-comment{
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-16;
+        width: 100%;
+        align-items: flex-end;
+
+        @include desktop{
+            display: flex;
+            flex-direction: row;
+            gap: $spacing-16;
+        }
+
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            gap: $spacing-16;
+        }
+    }
+
+    &__comment-count{
+        @include mobile-label;
+
+        @include desktop{
+            @include desktop-tablet-label;
+        }
+
+        @include tablet{
+            @include desktop-tablet-label;
+        }
+    }
+}

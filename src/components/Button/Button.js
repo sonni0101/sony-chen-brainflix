@@ -1,11 +1,11 @@
 import React from 'react';
 import './Button.scss';
 
-function Button({icon, text}){
+function Button(prop){
     return(
         <button className='primary-button'>
-            <img src={icon} alt="Button icon" className='primary-button__icon' />
-            <p className='primary-button__text'>{text}</p>
+            <img src={prop.icon} alt="Button icon" className='primary-button__icon' />
+            <p className='primary-button__text'>{prop.text}</p>
         </button>
     );
 }

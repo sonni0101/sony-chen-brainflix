@@ -45,14 +45,14 @@ p {
 @media screen and (min-width: 1280px) {
   p {
     font-size: 0.875rem;
-    line-height: 0.875rem;
+    line-height: 1.375rem;
     font-weight: 400;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   p {
     font-size: 0.875rem;
-    line-height: 0.875rem;
+    line-height: 1.375rem;
     font-weight: 400;
   }
 }

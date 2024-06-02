@@ -5,6 +5,7 @@ import SearchBar from '../SearchBar/SearchBar.js';
 import ProfilePic from '../ProfilePic/profile_pic.js';
 import Button from '../Button/Button.js';
 import ButtonIcon from '../../assets/icons/upload.svg';
+import ProfilePicImage from '../../assets/images/Mohan-muruge.jpg';
 
 function Header() {
     return (
@@ -14,10 +15,16 @@ function Header() {
                 <div className="header__right">
                     <div className="header__right--mobile">
                         <SearchBar />
-                        <ProfilePic className="header__profile-pic-mobile" />
+                        <ProfilePic 
+                        image={ProfilePicImage} 
+                        className="header__profile-pic-mobile" 
+                        />
                     </div>
                     <Button icon={ButtonIcon} text="Upload"/>
-                    <ProfilePic className="header__profile-pic-desktop" />
+                    <ProfilePic 
+                    image={ProfilePicImage} 
+                    className="header__profile-pic-desktop" 
+                    />
                 </div>
             </nav>
         </header>

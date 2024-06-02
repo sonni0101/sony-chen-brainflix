@@ -45,14 +45,14 @@ p {
 @media screen and (min-width: 1280px) {
   p {
     font-size: 0.875rem;
-    line-height: 0.875rem;
+    line-height: 1.375rem;
     font-weight: 400;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   p {
     font-size: 0.875rem;
-    line-height: 0.875rem;
+    line-height: 1.375rem;
     font-weight: 400;
   }
 }
@@ -62,4 +62,28 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.comment {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid #e1e1e1;
+}
+.comment__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.comment__upper-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.comment__profile-no-image {
+  background-color: #e1e1e1;
+}
+.comment__time {
+  color: #afafaf;
 }/*# sourceMappingURL=Comment.css.map */
