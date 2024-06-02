@@ -1,0 +1,26 @@
+@import '../../styles/global.scss';
+
+.video-thumbnail{
+    display: flex;
+    flex-direction: row;
+    gap: $spacing-16;
+
+    &__detail{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__wrapper{
+        background-color: $background-grey;
+        border-radius: 0.25rem;
+        height: 64px;
+        overflow: hidden;
+        aspect-ratio: 2 / 1;
+        height: 4rem;
+    }
+
+    &__image{
+        background-size: cover;
+    }
+}

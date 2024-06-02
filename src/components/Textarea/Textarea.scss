@@ -7,7 +7,7 @@
     width: 100%;
 
     &__label{
-        color: $text-secondary;
+        @include label-style;
     }
 
     &__textarea{

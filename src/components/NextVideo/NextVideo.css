@@ -192,56 +192,24 @@ textarea::placeholder {
   }
 }
 
-.primary-button {
-  font-size: 0.625rem;
-  line-height: 1.25rem;
-  font-weight: 700;
-  border: none;
-  outline: none;
-  width: 100%;
-  background: #0095ff;
-  color: #ffffff;
-  height: 2.5rem;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1rem;
-  padding: 0 3.5rem 0 2rem;
-}
-@media screen and (min-width: 1280px) {
-  .primary-button {
-    width: 9.375rem;
-    font-size: 0.75rem;
-    line-height: 1.25rem;
-    font-weight: 700;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .primary-button {
-    width: 9.375rem;
-    font-size: 0.75rem;
-    line-height: 1.25rem;
-    font-weight: 700;
-  }
-}
-.primary-button:hover {
-  background: #0065ad;
-}
-.primary-button__text {
-  text-align: center;
-  width: 100%;
+.next-video__heading {
+  color: #afafaf;
   text-transform: uppercase;
   font-size: 0.625rem;
   line-height: 1.25rem;
   font-weight: 700;
 }
 @media screen and (min-width: 1280px) {
-  .primary-button__text {
+  .next-video__heading {
     font-size: 0.75rem;
     line-height: 1.25rem;
     font-weight: 700;
-    width: auto;
   }
-}/*# sourceMappingURL=Button.css.map */
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .next-video__heading {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+  }
+}/*# sourceMappingURL=NextVideo.css.map */

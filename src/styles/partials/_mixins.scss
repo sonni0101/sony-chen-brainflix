@@ -71,3 +71,17 @@
     line-height: 1.25rem;
     font-weight: 700;
 }
+
+@mixin label-style{
+    color: $text-secondary;
+    text-transform: uppercase;
+    @include mobile-label;
+
+    @include desktop{
+        @include desktop-tablet-label;
+    }
+
+    @include tablet{
+        @include desktop-tablet-label;
+    }
+}

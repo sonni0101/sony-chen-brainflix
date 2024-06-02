@@ -3,19 +3,19 @@
 
 @font-face {
     font-family:'Avenir Next LT Pro';
-    src: url(../assets/fonts/AvenirNextLTPro-Demi.otf);
+    src: url(../assets/fonts/AvenirNextLTPro-Regular.otf)format('opentype');
     font-weight: 400;
 }
 
 @font-face {
     font-family:'Avenir Next LT Pro';
-    src: url(../assets/fonts/AvenirNextLTPro-Demi.otf);
+    src: url(../assets/fonts/AvenirNextLTPro-Demi.otf) format('opentype');
     font-weight: 600;
 }
 
 @font-face {
-    font-family:'Avenir Next LT Pro';
-    src: url(../assets/fonts/AvenirNextLTPro-Bold.otf);
+    font-family: 'Avenir Next LT Pro';
+    src: url(../assets/fonts/AvenirNextLTPro-Bold.otf) format('opentype');
     font-weight: 700;
 }
 
@@ -44,6 +44,34 @@ h1{
 
     @include tablet() {
         @include desktop-tablet-page-header;
+    }
+}
+
+h2{
+    @include mobile-section-header;
+    margin: 0;
+    padding: 0;
+
+    @include desktop {
+        @include desktop-tablet-section-header;
+    }
+
+    @include tablet() {
+        @include desktop-tablet-section-header;
+    }
+}
+
+h3{
+    @include mobile-subheader;
+    margin: 0;
+    padding: 0;
+
+    @include desktop {
+        @include desktop-tablet-subheader;
+    }
+
+    @include tablet() {
+        @include desktop-tablet-subheader;
     }
 }
 
