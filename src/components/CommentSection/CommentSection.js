@@ -8,11 +8,11 @@ import Button from "../Button/Button";
 import add from '../../assets/icons/add_comment.svg';
 
 
-function CommentSection(){
+function CommentSection({loadComments}){
     return(
         <section className="comment-section">
             <div className="comment-section__wrapper">
-                <p className="comment-section__comment-count">3 Comments</p>
+                <h3 className="comment-section__comment-count"> 3 Comments</h3>
                 <div className="comment-section__add-comment-wrapper">
                     <ProfilePic image={ProfilePicImage} />
                     <div className="comment-section__add-comment">
@@ -21,7 +21,13 @@ function CommentSection(){
                     </div>
                 </div>
             </div>
-            <Comment />
+            {loadComments.map(comment =>(
+                <Comment
+                key={comment.id}
+                commemtor={comment.name}
+                comment={comment.comment}
+                    />
+            ))}
         </section>
     );
 }

@@ -4,11 +4,11 @@ import play from '../../assets/icons/play.svg';
 import volume from '../../assets/icons/volume_up.svg';
 import fullscreen from '../../assets/icons/fullscreen.svg';
 
-function VideoPlayer({videoLink}){
+function VideoPlayer(prop){
     return(
         <section className="video-player">
             <div className="video-player__section-container">
-                <video className="video-player__video" poster={videoLink}></video>
+                <video className="video-player__video" poster={prop.videoLink}></video>
                 <div className="video-player__controls">
                     <div className="video-player__play">
                         <img src={play} alt="Video play icon" />

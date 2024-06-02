@@ -1,15 +1,15 @@
 import React from "react";
 import './VideoThumbnail.scss'
 
-function VideoThumbnail(prop){
+function VideoThumbnail({videoImage, title, creator, onClick }){
     return(
-        <div className="video-thumbnail">
+        <div className="video-thumbnail" onClick={onClick}>
             <div className="video-thumbnail__wrapper">
-                <img src={prop.videoImage} alt={prop.altText} className="video-thumbnail__image" />
+                <img src={videoImage} alt={title} className="video-thumbnail__image" />
             </div>
             <div className="video-thumbnail__detail">
-                <h3 className="video-thumbnail__heading">title</h3>
-                <p className="video-thumbnail__name">Nmae</p>
+                <h3 className="video-thumbnail__heading">{title}</h3>
+                <p className="video-thumbnail__name">{creator}</p>
             </div>
         </div>
     );

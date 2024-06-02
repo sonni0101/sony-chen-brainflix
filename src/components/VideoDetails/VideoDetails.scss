@@ -12,7 +12,24 @@
     }
 
     @include tablet{
-        padding:$spacing-16;
+        padding:$spacing-16 $spacing-36;
+    }
+
+    &__wrapper{
+        border-bottom: 1px solid $divider;
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-8;
+
+        @include desktop{
+            padding-top: $spacing-32;
+            padding-right: $spacing-24;
+    
+        }
+
+        @include tablet{
+            padding: 0;
+        }
     }
 
     &__info-group{
@@ -20,7 +37,6 @@
         flex-direction: row;
         justify-content: space-between;
         padding: $spacing-8 0;
-        border-bottom: 1px solid $divider;
     }
 
     &__left-panel{
@@ -77,6 +93,6 @@
     }
 
     &__description{
-        padding: $spacing-16 0 0 0;
+        padding: $spacing-16 $spacing-24 0 0;
     }
 }

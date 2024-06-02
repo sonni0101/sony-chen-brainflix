@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import './App.scss';
@@ -6,19 +7,38 @@ import VideoPlayer from './components/VideoPlayer/VideoPlayer.js';
 import VideoDetails from './components/VideoDetails/VideoDetails.js';
 import CommentSection from './components/CommentSection/CommentSection.js';
 import NextVideo from './components/NextVideo/NextVideo.js';
+import VideoDetialsData from './data/video-details.json';
+import VideoDetials from './data/videos.json';
+
 
 function App() {
+ const [currentVideo, setCurrenVideo] = useState(VideoDetialsData[0]);
+
+ const handleVideoSelect = (id) => {
+  const selectedVideo = VideoDetialsData.find(video => video.id === id);
+  setCurrenVideo(selectedVideo);
+ };
+
   return (
     <>
       <Header />
-      <VideoPlayer />
+      <VideoPlayer videoLink={currentVideo.image} />
       <div className='section-wrapper'>
         <div className='section-wrapper__left'>
-          <VideoDetails />
-          <CommentSection />
+          <VideoDetails
+           title={currentVideo.title}
+           creator={currentVideo.channel}
+           uploadDate={new Date(currentVideo.timestamp).toLocaleDateString()}
+           views={currentVideo.views}
+           likes={currentVideo.likes}
+           description={currentVideo.description} />
+          <CommentSection loadComments={currentVideo.comments} />
         </div>
         <div className='section-wrapper__right'>
-          <NextVideo />
+          <NextVideo 
+            videos={VideoDetials.filter(video => video.id !== currentVideo.id)}
+            onVideoSelect={handleVideoSelect}
+            />
         </div>
       </div>
     </>

@@ -1,16 +1,16 @@
 @font-face {
   font-family: "Avenir Next LT Pro";
-  src: url(../assets/fonts/AvenirNextLTPro-Demi.otf);
+  src: url(../assets/fonts/AvenirNextLTPro-Regular.otf) format("opentype");
   font-weight: 400;
 }
 @font-face {
   font-family: "Avenir Next LT Pro";
-  src: url(../assets/fonts/AvenirNextLTPro-Demi.otf);
+  src: url(../assets/fonts/AvenirNextLTPro-Demi.otf) format("opentype");
   font-weight: 600;
 }
 @font-face {
   font-family: "Avenir Next LT Pro";
-  src: url(../assets/fonts/AvenirNextLTPro-Bold.otf);
+  src: url(../assets/fonts/AvenirNextLTPro-Bold.otf) format("opentype");
   font-weight: 700;
 }
 h1 {
@@ -192,21 +192,29 @@ textarea::placeholder {
   }
 }
 
+.profile-image-none {
+  display: none;
+}
+
 .profile-pic {
-  width: 2.25rem;
+  min-width: 2.25rem;
+  max-width: 2.25rem;
   height: 2.25rem;
   border-radius: 50%;
   overflow: hidden;
+  margin-right: 1.5rem;
 }
 @media screen and (min-width: 1280px) {
   .profile-pic {
-    width: 2.5rem;
+    min-width: 2.5rem;
+    max-width: 2.5rem;
     height: 2.5rem;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .profile-pic {
-    width: 2.5rem;
+    min-width: 2.5rem;
+    max-width: 2.5rem;
     height: 2.5rem;
   }
 }

@@ -3,9 +3,16 @@
 .comment{
     display: flex;
     flex-direction: row;
-    gap: $spacing-24;
-    padding: $spacing-16;
+    padding: $spacing-24 $spacing-24 $spacing-24 $spacing-8;
     border-top: 1px solid $divider;
+
+    @include desktop{
+        padding: $spacing-24 $spacing-24 $spacing-24 $spacing-8;
+    }
+
+    @include tablet{
+        padding: $spacing-24 0;
+    }
 
     &__wrapper{
         display: flex;

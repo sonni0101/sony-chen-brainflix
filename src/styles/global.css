@@ -190,4 +190,8 @@ textarea::placeholder {
     width: 15rem;
     height: 2.5rem;
   }
+}
+
+.profile-image-none {
+  display: none;
 }/*# sourceMappingURL=global.css.map */

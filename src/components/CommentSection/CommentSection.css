@@ -1,16 +1,16 @@
 @font-face {
   font-family: "Avenir Next LT Pro";
-  src: url(../assets/fonts/AvenirNextLTPro-Demi.otf);
+  src: url(../assets/fonts/AvenirNextLTPro-Regular.otf) format("opentype");
   font-weight: 400;
 }
 @font-face {
   font-family: "Avenir Next LT Pro";
-  src: url(../assets/fonts/AvenirNextLTPro-Demi.otf);
+  src: url(../assets/fonts/AvenirNextLTPro-Demi.otf) format("opentype");
   font-weight: 600;
 }
 @font-face {
   font-family: "Avenir Next LT Pro";
-  src: url(../assets/fonts/AvenirNextLTPro-Bold.otf);
+  src: url(../assets/fonts/AvenirNextLTPro-Bold.otf) format("opentype");
   font-weight: 700;
 }
 h1 {
@@ -192,20 +192,46 @@ textarea::placeholder {
   }
 }
 
+.profile-image-none {
+  display: none;
+}
+
 .comment-section {
   display: flex;
   flex-direction: column;
+  padding: 0 1rem;
+}
+@media screen and (min-width: 1280px) {
+  .comment-section {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .comment-section {
+    padding: 0 2.25rem;
+  }
 }
 .comment-section__wrapper {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
-  gap: 1.5rem;
+  padding-bottom: 1rem;
+  gap: 1rem;
+}
+@media screen and (min-width: 1280px) {
+  .comment-section__wrapper {
+    padding: 0;
+    gap: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .comment-section__wrapper {
+    padding: 0;
+    gap: 0;
+  }
 }
 .comment-section__add-comment-wrapper {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
   box-sizing: border-box;
 }
 @media screen and (min-width: 1280px) {
@@ -213,7 +239,7 @@ textarea::placeholder {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    gap: 1.5rem;
+    padding: 1.5rem 1.5rem 1.5rem 0.5rem;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -221,7 +247,7 @@ textarea::placeholder {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    gap: 1.5rem;
+    padding: 1.5rem 0;
   }
 }
 .comment-section__add-comment {
@@ -243,24 +269,5 @@ textarea::placeholder {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-  }
-}
-.comment-section__comment-count {
-  font-size: 0.625rem;
-  line-height: 1.25rem;
-  font-weight: 700;
-}
-@media screen and (min-width: 1280px) {
-  .comment-section__comment-count {
-    font-size: 0.75rem;
-    line-height: 1.25rem;
-    font-weight: 700;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .comment-section__comment-count {
-    font-size: 0.75rem;
-    line-height: 1.25rem;
-    font-weight: 700;
   }
 }/*# sourceMappingURL=CommentSection.css.map */

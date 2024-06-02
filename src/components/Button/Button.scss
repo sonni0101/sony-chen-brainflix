@@ -19,11 +19,13 @@
     @include desktop{
         width: 9.375rem;
         @include desktop-tablet-button;
+        padding: 0 $spacing-36 0 $spacing-12;
     }
 
     @include tablet{
         width: 9.375rem;
         @include desktop-tablet-button;
+        padding: 0 $spacing-36 0 $spacing-12;
     }
 
     &:hover{

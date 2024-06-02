@@ -1,16 +1,16 @@
 @font-face {
   font-family: "Avenir Next LT Pro";
-  src: url(../assets/fonts/AvenirNextLTPro-Demi.otf);
+  src: url(../assets/fonts/AvenirNextLTPro-Regular.otf) format("opentype");
   font-weight: 400;
 }
 @font-face {
   font-family: "Avenir Next LT Pro";
-  src: url(../assets/fonts/AvenirNextLTPro-Demi.otf);
+  src: url(../assets/fonts/AvenirNextLTPro-Demi.otf) format("opentype");
   font-weight: 600;
 }
 @font-face {
   font-family: "Avenir Next LT Pro";
-  src: url(../assets/fonts/AvenirNextLTPro-Bold.otf);
+  src: url(../assets/fonts/AvenirNextLTPro-Bold.otf) format("opentype");
   font-weight: 700;
 }
 h1 {
@@ -205,7 +205,24 @@ textarea::placeholder {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .video-detail {
-    padding: 1rem;
+    padding: 1rem 2.25rem;
+  }
+}
+.video-detail__wrapper {
+  border-bottom: 1px solid #e1e1e1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+@media screen and (min-width: 1280px) {
+  .video-detail__wrapper {
+    padding-top: 2rem;
+    padding-right: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .video-detail__wrapper {
+    padding: 0;
   }
 }
 .video-detail__info-group {
@@ -213,7 +230,6 @@ textarea::placeholder {
   flex-direction: row;
   justify-content: space-between;
   padding: 0.5rem 0;
-  border-bottom: 1px solid #e1e1e1;
 }
 .video-detail__left-panel {
   display: flex;
@@ -277,5 +293,5 @@ textarea::placeholder {
   }
 }
 .video-detail__description {
-  padding: 1rem 0 0 0;
+  padding: 1rem 1.5rem 0 0;
 }/*# sourceMappingURL=VideoDetails.css.map */

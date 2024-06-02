@@ -3,32 +3,50 @@
 .comment-section{
     display: flex;
     flex-direction: column;
+    padding: 0 $spacing-16;
+
+    @include desktop{
+        padding: 0;
+    }
+
+    @include tablet{
+        padding: 0 $spacing-36;
+    }
 
     &__wrapper{
         display: flex;
         flex-direction: column;
-        padding: $spacing-16;
-        gap: $spacing-24;
+        padding-bottom: $spacing-16;
+        gap: $spacing-16;
+
+        @include desktop{
+            padding: 0;
+            gap: 0;
+        }
+
+        @include tablet{
+            padding: 0;
+            gap: 0;
+        }
     }
 
     &__add-comment-wrapper{
         display: flex;
         flex-direction: row;
-        gap: $spacing-16;
         box-sizing: border-box;
 
         @include desktop{
             display: flex;
             flex-direction: row;
             align-items: flex-end;
-            gap: $spacing-24;
+            padding: $spacing-24 $spacing-24 $spacing-24 $spacing-8;
         }
 
         @include tablet{
             display: flex;
             flex-direction: row;
             align-items: flex-end;
-            gap: $spacing-24;
+            padding: $spacing-24 0;
         }
     }
 
@@ -49,18 +67,6 @@
             display: flex;
             flex-direction: row;
             gap: $spacing-16;
-        }
-    }
-
-    &__comment-count{
-        @include mobile-label;
-
-        @include desktop{
-            @include desktop-tablet-label;
-        }
-
-        @include tablet{
-            @include desktop-tablet-label;
         }
     }
 }
