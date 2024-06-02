@@ -7,12 +7,12 @@ import ProfilePicImage from '../../assets/images/Mohan-muruge.jpg';
 import Button from "../Button/Button";
 import add from '../../assets/icons/add_comment.svg';
 
-
 function CommentSection({loadComments}){
+
     return(
         <section className="comment-section">
             <div className="comment-section__wrapper">
-                <h3 className="comment-section__comment-count"> 3 Comments</h3>
+                <h3 className="comment-section__comment-count"> {loadComments.length} Comments</h3>
                 <div className="comment-section__add-comment-wrapper">
                     <ProfilePic image={ProfilePicImage} />
                     <div className="comment-section__add-comment">
@@ -25,6 +25,7 @@ function CommentSection({loadComments}){
                 <Comment
                 key={comment.id}
                 commemtor={comment.name}
+                commentDate={ new Date (comment.timestamp).toLocaleDateString}
                 comment={comment.comment}
                     />
             ))}
