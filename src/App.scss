@@ -26,7 +26,7 @@
     }
 
     &__right{
-        border-left: 1px solid $divider;
+        border-left: 0.0625rem solid $divider;
 
         @include desktop{
             padding: $spacing-24 0 $spacing-24 $spacing-24;
@@ -34,7 +34,9 @@
         }
 
         @include tablet{
-            padding: 0 $spacing-36 $spacing-24 $spacing-36;
+            margin: 0 $spacing-36 $spacing-24 $spacing-36;
+            border-top: 0.0625rem solid $divider;
+            border-left: none;
         }
     }
 }

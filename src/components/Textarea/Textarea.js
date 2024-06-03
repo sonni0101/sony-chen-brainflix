@@ -2,6 +2,7 @@ import React from "react";
 import './Textarea.scss';
 
 function Textarea(){
+
     return(
         <form className="comment-textarea">
             <label className="comment-textarea__label">Join the conversation</label>

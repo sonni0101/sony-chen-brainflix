@@ -104,10 +104,11 @@ textarea{
     box-sizing: border-box;
     border: 0.0625rem solid $input-field-defualt;
     border-radius: 0.25rem;
-    background-color: $white;
+    background-color: $input-background;
     outline: none;
     @include mobile-body;
     font-family:'Avenir Next LT Pro' !important;
+    resize: none;
     
     @include desktop{
         @include desktop-tablet-body;
@@ -138,16 +139,40 @@ textarea{
             height: 2.5rem;
         }
     }
+
+    &__error {
+        outline: 2px solid $error;
+      }
 }
 
 .profile-image-none{
     display: none;
 }
 
-.brainflix_icon{
+.brainflix_icon_lg{
     width: 1.5rem;
 }
 
+.brainflix_icon{
+    width: 1rem;
+
+    @include desktop{
+        width: 1.5rem;
+    }
+
+    @include tablet(){
+        width: 1.5rem;
+    }
+}
+
 .brainflix_icon_sm{
-    width: 0.625rem;
+    width: 0.5rem;
+
+    @include desktop{
+        width: 1.5rem;
+    }
+
+    @include tablet(){
+        width: 1.5rem;
+    }
 }

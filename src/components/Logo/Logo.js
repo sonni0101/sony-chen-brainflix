@@ -4,8 +4,8 @@ import BrainFlixLogo from '../../assets/logo/BrainFlix-logo.svg';
 
 function Logo(){
     return(
-        <a>  
-            <img src={BrainFlixLogo} alt="Logo image" className='Bandflix-logo' />
+        <a className='Bandflix-logo'>  
+            <img src={BrainFlixLogo} alt="Logo image" className='Bandflix-logo__logo' />
         </a>
     );
 }

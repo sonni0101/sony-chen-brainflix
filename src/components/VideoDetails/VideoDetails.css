@@ -116,12 +116,13 @@ textarea {
   box-sizing: border-box;
   border: 0.0625rem solid #e1e1e1;
   border-radius: 0.25rem;
-  background-color: #ffffff;
+  background-color: #fafafa;
   outline: none;
   font-size: 0.875rem !important;
   line-height: 1.125rem !important;
   font-weight: 400 !important;
   font-family: "Avenir Next LT Pro" !important;
+  resize: none;
 }
 @media screen and (min-width: 1280px) {
   input,
@@ -192,17 +193,45 @@ textarea::placeholder {
     height: 2.5rem;
   }
 }
+input__error,
+textarea__error {
+  outline: 2px solid #d22d2d;
+}
 
 .profile-image-none {
   display: none;
 }
 
-.brainflix_icon {
+.brainflix_icon_lg {
   width: 1.5rem;
 }
 
+.brainflix_icon {
+  width: 1rem;
+}
+@media screen and (min-width: 1280px) {
+  .brainflix_icon {
+    width: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .brainflix_icon {
+    width: 1.5rem;
+  }
+}
+
 .brainflix_icon_sm {
-  width: 0.625rem;
+  width: 0.5rem;
+}
+@media screen and (min-width: 1280px) {
+  .brainflix_icon_sm {
+    width: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .brainflix_icon_sm {
+    width: 1.5rem;
+  }
 }
 
 .video-detail {
@@ -249,6 +278,7 @@ textarea::placeholder {
   padding: 1rem 0;
   border-bottom: 0.0625rem solid #e1e1e1;
   border-top: 0.0625rem solid #e1e1e1;
+  gap: 1rem;
 }
 @media screen and (min-width: 1280px) {
   .video-detail__info-group {
@@ -267,6 +297,7 @@ textarea::placeholder {
   flex-direction: column;
   gap: 1rem;
   align-items: flex-start;
+  flex: 1;
 }
 @media screen and (min-width: 1280px) {
   .video-detail__left-panel {
@@ -281,6 +312,7 @@ textarea::placeholder {
     display: flex;
     flex-direction: row;
     gap: 1.5rem;
+    align-items: center;
   }
 }
 .video-detail__left-panel--name {
@@ -310,12 +342,14 @@ textarea::placeholder {
   flex-direction: column;
   color: #afafaf;
   gap: 1rem;
+  flex: 1;
 }
 @media screen and (min-width: 1280px) {
   .video-detail__right-panel {
     display: flex;
     flex-direction: row;
     gap: 1.5rem;
+    flex: 0;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -323,6 +357,7 @@ textarea::placeholder {
     display: flex;
     flex-direction: row;
     gap: 1.5rem;
+    flex: 0;
   }
 }
 .video-detail__description {

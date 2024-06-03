@@ -116,12 +116,13 @@ textarea {
   box-sizing: border-box;
   border: 0.0625rem solid #e1e1e1;
   border-radius: 0.25rem;
-  background-color: #ffffff;
+  background-color: #fafafa;
   outline: none;
   font-size: 0.875rem !important;
   line-height: 1.125rem !important;
   font-weight: 400 !important;
   font-family: "Avenir Next LT Pro" !important;
+  resize: none;
 }
 @media screen and (min-width: 1280px) {
   input,
@@ -192,15 +193,43 @@ textarea::placeholder {
     height: 2.5rem;
   }
 }
+input__error,
+textarea__error {
+  outline: 2px solid #d22d2d;
+}
 
 .profile-image-none {
   display: none;
 }
 
-.brainflix_icon {
+.brainflix_icon_lg {
   width: 1.5rem;
 }
 
+.brainflix_icon {
+  width: 1rem;
+}
+@media screen and (min-width: 1280px) {
+  .brainflix_icon {
+    width: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .brainflix_icon {
+    width: 1.5rem;
+  }
+}
+
 .brainflix_icon_sm {
-  width: 0.625rem;
+  width: 0.5rem;
+}
+@media screen and (min-width: 1280px) {
+  .brainflix_icon_sm {
+    width: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .brainflix_icon_sm {
+    width: 1.5rem;
+  }
 }/*# sourceMappingURL=global.css.map */

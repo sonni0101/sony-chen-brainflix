@@ -10,7 +10,6 @@ import NextVideo from './components/NextVideo/NextVideo.js';
 import VideoDetialsData from './data/video-details.json';
 import VideoDetials from './data/videos.json';
 
-
 function App() {
  const [currentVideo, setCurrenVideo] = useState(VideoDetialsData[0]);
 

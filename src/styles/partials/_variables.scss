@@ -9,7 +9,7 @@ $brainflix-dark-black: #000000;
 $brainflix-dark-blue: #0065ad;
 $mercury: #e1e1e1;
 $alabaster: #fafafa;
-$red: #d22d2d;
+$error: #d22d2d;
 
 // Colour token
 $text-primary: $brainflix-black;
@@ -19,10 +19,10 @@ $button-primary-default: $brainflix-blue;
 $button-primary-hover: $brainflix-dark-blue;
 $button-background: $white;
 $divider: $mercury;
-$input-defualt: $alabaster;
+$input-background: $alabaster;
 $input-field-defualt: $mercury;
 $input-field-active: $brainflix-blue;
-$input-field-warning: $red;
+$input-field-warning: $error;
 $video-background: $brainflix-dark-black;
 $video-button-background: $brainflix-black;
 $video-scrub-bar:$brainflix-dark-black;
