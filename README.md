@@ -8,8 +8,3 @@ I used these resources as learning materials and references to solve the “Divi
 https://date-fns.org/
 https://stackoverflow.com/questions/69733368/date-fns-format-distance-is-not-in-correct-words
 https://www.npmjs.com/package/date-fns/v/3.0.1
-
-<<<<<<< HEAD
-=======
-# sony-chen-brainflix
->>>>>>> origin/feature/sprint-1
