@@ -3,6 +3,10 @@
 .search-bar{
     width: 100%;
 
+    @include desktop{
+        width: 15rem;
+    }
+
     &__input{
         background-image: url('../../assets/icons/search.svg');
         background-position: 10px 10px; 

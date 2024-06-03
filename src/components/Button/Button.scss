@@ -37,6 +37,7 @@
         width: 100%;
         text-transform: uppercase;
         @include mobile-button;
+        color: $white;
 
         @include desktop{
             @include desktop-tablet-button;

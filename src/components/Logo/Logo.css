@@ -192,6 +192,10 @@ textarea::placeholder {
   }
 }
 
+.profile-image-none {
+  display: none;
+}
+
 .bandflix-logo {
   max-height: 1.5625rem;
   max-width: 7.5rem;

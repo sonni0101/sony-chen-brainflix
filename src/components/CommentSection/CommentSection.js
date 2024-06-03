@@ -25,7 +25,7 @@ function CommentSection({loadComments}){
                 <Comment
                 key={comment.id}
                 commemtor={comment.name}
-                commentDate={ new Date (comment.timestamp).toLocaleDateString}
+                commentDate={ new Date (comment.timestamp).toLocaleDateString()}
                 comment={comment.comment}
                     />
             ))}

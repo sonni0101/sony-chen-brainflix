@@ -205,16 +205,31 @@ textarea::placeholder {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex: 2;
+}
+@media screen and (min-width: 1280px) {
+  .video-thumbnail__detail {
+    flex: 1.5;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .video-thumbnail__detail {
+    flex: 1.5;
+  }
 }
 .video-thumbnail__wrapper {
   background-color: #e1e1e1;
   border-radius: 0.25rem;
-  height: 64px;
   overflow: hidden;
-  aspect-ratio: 2/1;
-  height: 4rem;
+  aspect-ratio: 16/9;
+  min-height: 4rem;
+  flex: 1;
+}
+@media screen and (min-width: 1280px) {
+  .video-thumbnail__wrapper {
+    border-bottom: 0.0625rem solid #e1e1e1;
+  }
 }
 .video-thumbnail__image {
-  width: 100%;
-  transform: translate(0, -13%);
+  height: 100%;
 }/*# sourceMappingURL=VideoThumbnail.css.map */

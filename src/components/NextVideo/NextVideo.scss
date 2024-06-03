@@ -10,12 +10,16 @@
 
     @include desktop{
         border-top: none;
+        padding: 0;
+        margin: 0;
+        gap: $spacing-24;
     }
 
     @include tablet{
         border-top: none;
         gap: $spacing-24;
         margin: 0;
+        width: 18.75rem;
     }
 
     &__heading{

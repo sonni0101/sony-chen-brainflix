@@ -192,6 +192,10 @@ textarea::placeholder {
   }
 }
 
+.profile-image-none {
+  display: none;
+}
+
 .comment-textarea {
   display: flex;
   flex-direction: column;

@@ -11,7 +11,7 @@ function Comment(prop){
               />
             <div className="comment__wrapper">
                 <div className="comment__upper-section">
-                    <p className="comment__name">{prop.commemtor}</p>
+                    <h3 className="comment__name">{prop.commemtor}</h3>
                     <p className="comment__time">{prop.commentDate}</p>
                 </div>
                 <p className="comment__text">{prop.comment}</p>

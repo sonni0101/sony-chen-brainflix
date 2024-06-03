@@ -8,11 +8,11 @@ function VideoDetails ({title, creator, uploadDate, views, likes, description })
     return(
         <section className="video-detail">
             <div className="video-detail__wrapper">
-                <h1>The Future of Artificial Intelligence</h1>
+                <h1>{title}</h1>
 
                 <div className="video-detail__info-group">
                     <div className="video-detail__left-panel">
-                        <p className="video-detail__left-panel--name">{creator}</p>
+                        <h3 className="video-detail__left-panel--name">{creator}</h3>
                         <p className="video-detail__left-panel--date">{uploadDate}</p>
                     </div>
 

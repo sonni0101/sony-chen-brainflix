@@ -23,7 +23,7 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            max-width: $desktop-total-width; 
+            max-width: $desktop-12-columns; 
             margin: auto;
             padding: 0;
         }
@@ -46,14 +46,12 @@
         width: 100%;
 
         @include desktop{
-            gap: $spacing-24;
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
         }
 
         @include tablet{
-            gap: $spacing-24;
             display: flex;
             flex-direction: row;
             justify-content: flex-end;

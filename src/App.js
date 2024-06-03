@@ -22,7 +22,10 @@ function App() {
   return (
     <>
       <Header />
-      <VideoPlayer videoLink={currentVideo.image} />
+      <VideoPlayer 
+        videoLink={currentVideo.image} 
+        duration={currentVideo.duration}
+      />
       <div className='section-wrapper'>
         <div className='section-wrapper__left'>
           <VideoDetails
