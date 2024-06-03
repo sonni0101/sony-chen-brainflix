@@ -1,5 +1,5 @@
 import React from "react";
-import './profile_pic.scss';
+import './ProfilePic.scss';
 
 function ProfilePic(prop){
     return(

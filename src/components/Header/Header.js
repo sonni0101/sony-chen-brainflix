@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.scss';
 import Logo from '../Logo/Logo.js';
 import SearchBar from '../SearchBar/SearchBar.js';
-import ProfilePic from '../ProfilePic/profile_pic.js';
+import ProfilePic from '../ProfilePic/ProfilePic.js';
 import Button from '../Button/Button.js';
 import ButtonIcon from '../../assets/icons/upload.svg';
 import ProfilePicImage from '../../assets/images/Mohan-muruge.jpg';

@@ -1,6 +1,6 @@
 import React from "react";
 import './Comment.scss';
-import ProfilePic from "../ProfilePic/profile_pic";
+import ProfilePic from "../ProfilePic/ProfilePic";
 import { formatTime } from '../../utils/formatTime';
 
 function Comment(prop){

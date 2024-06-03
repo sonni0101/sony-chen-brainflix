@@ -2,7 +2,7 @@ import React from "react";
 import './CommentSection.scss';
 import Comment from "../Comment/Comment";
 import InputField from "../Textarea/Textarea";
-import ProfilePic from "../ProfilePic/profile_pic";
+import ProfilePic from "../ProfilePic/ProfilePic";
 import ProfilePicImage from '../../assets/images/Mohan-muruge.jpg';
 import Button from "../Button/Button";
 import add from '../../assets/icons/add_comment.svg';
