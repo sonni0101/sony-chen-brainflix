@@ -75,13 +75,13 @@
 @mixin label-style{
     color: $text-secondary;
     text-transform: uppercase;
-    @include mobile-label;
+    @include mobile-subheader;
 
     @include desktop{
-        @include desktop-tablet-label;
+        @include desktop-tablet-subheader;
     }
 
     @include tablet{
-        @include desktop-tablet-label;
+        @include desktop-tablet-subheader;
     }
 }
