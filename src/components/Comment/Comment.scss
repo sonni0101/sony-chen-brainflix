@@ -3,7 +3,7 @@
 .comment{
     display: flex;
     flex-direction: row;
-    padding: $spacing-16 $spacing-16 $spacing-16 $spacing-8;
+    padding: $spacing-16 0;
     border-top: 1px solid $divider;
 
     @include desktop{
@@ -21,11 +21,11 @@
         gap: $spacing-8;
 
         @include desktop{
-            gap: $spacing-12;
+            gap: $spacing-8;
         }
 
         @include tablet{
-            gap: $spacing-12;
+            gap: $spacing-8;
         }
     }
 

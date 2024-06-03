@@ -1,7 +1,6 @@
 @import '../../styles/global.scss';
 
 .primary-button{
-    @include mobile-button;
     border: none;
     outline: none;
     width: 100%;
@@ -14,18 +13,14 @@
     flex-direction: row;
     align-items: center;
     gap: $spacing-16;
-    padding: 0 $spacing-56 0 $spacing-32;
+    padding: 0 $spacing-36 0 $spacing-12;
 
     @include desktop{
-        width: 9.375rem;
-        @include desktop-tablet-button;
-        padding: 0 $spacing-36 0 $spacing-12;
+        max-width: 9.375rem;
     }
 
     @include tablet{
-        width: 9.375rem;
-        @include desktop-tablet-button;
-        padding: 0 $spacing-36 0 $spacing-12;
+        max-width: 9.375rem;
     }
 
     &:hover{
@@ -36,12 +31,17 @@
         text-align: center;
         width: 100%;
         text-transform: uppercase;
-        @include mobile-button;
+        font-weight: 700 !important;
+        // @include mobile-button; -> on mockup the button font looks different than the given px
         color: $white;
 
         @include desktop{
             @include desktop-tablet-button;
             width: auto;
+        }
+
+        @include desktop{
+            @include desktop-tablet-button;
         }
     }
 }

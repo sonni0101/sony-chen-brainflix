@@ -80,7 +80,7 @@ h3 {
 }
 
 p {
-  font-size: 0.875rem !important;
+  font-size: 0.8125rem !important;
   line-height: 1.125rem !important;
   font-weight: 400 !important;
   margin: 0;
@@ -118,7 +118,7 @@ textarea {
   border-radius: 0.25rem;
   background-color: #fafafa;
   outline: none;
-  font-size: 0.875rem !important;
+  font-size: 0.8125rem !important;
   line-height: 1.125rem !important;
   font-weight: 400 !important;
   font-family: "Avenir Next LT Pro" !important;
@@ -146,7 +146,7 @@ textarea:focus {
 }
 input::-moz-placeholder, textarea::-moz-placeholder {
   color: #323232;
-  font-size: 0.875rem !important;
+  font-size: 0.8125rem !important;
   line-height: 1.125rem !important;
   font-weight: 400 !important;
   font-family: "Avenir Next LT Pro" !important;
@@ -154,7 +154,7 @@ input::-moz-placeholder, textarea::-moz-placeholder {
 input::placeholder,
 textarea::placeholder {
   color: #323232;
-  font-size: 0.875rem !important;
+  font-size: 0.8125rem !important;
   line-height: 1.125rem !important;
   font-weight: 400 !important;
   font-family: "Avenir Next LT Pro" !important;
