@@ -9,7 +9,6 @@ https://date-fns.org/
 https://stackoverflow.com/questions/69733368/date-fns-format-distance-is-not-in-correct-words
 https://www.npmjs.com/package/date-fns/v/3.0.1
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 <<<<<<< HEAD
 =======
 # sony-chen-brainflix
