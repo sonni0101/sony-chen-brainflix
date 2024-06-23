@@ -20,7 +20,7 @@ function Header() {
                         className="header__profile-pic-mobile" 
                         />
                     </div>
-                    <Button icon={ButtonIcon} text="Upload"/>
+                    <Button icon={ButtonIcon} text="Upload" link={"/VideoUploadPage"}/>
                     <ProfilePic 
                     image={ProfilePicImage} 
                     className="header__profile-pic-desktop" 
