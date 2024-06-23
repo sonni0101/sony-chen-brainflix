@@ -1,0 +1,8 @@
+@import '../../styles/global.scss';
+
+.divider{
+
+    &__solid{
+        border-top: 1px solid $divider;
+    }
+}
