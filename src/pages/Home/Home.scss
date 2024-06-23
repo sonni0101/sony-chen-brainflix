@@ -1,0 +1,42 @@
+@import '../../styles/partials/breakpoints';
+
+.section-wrapper{
+    display: flex;
+    flex-direction: column;
+
+    @include desktop{
+        display: flex;
+        flex-direction: row;
+        max-width: $desktop-12-columns;
+        margin: auto;
+    }
+
+    &__left{
+        display: flex;
+        flex-direction: column;
+
+        @include desktop{
+            gap: $spacing-24;
+            flex: 4;
+        }
+
+        @include tablet{
+            gap: 0;
+        }
+    }
+
+    &__right{
+        border-left: 0.0625rem solid $divider;
+
+        @include desktop{
+            padding: $spacing-24 0 $spacing-24 $spacing-24;
+            max-width: $desktop-4-columns;
+        }
+
+        @include tablet{
+            margin: 0 $spacing-36 $spacing-24 $spacing-36;
+            border-top: 0.0625rem solid $divider;
+            border-left: none;
+        }
+    }
+}
