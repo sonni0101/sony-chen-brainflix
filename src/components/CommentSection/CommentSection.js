@@ -1,10 +1,10 @@
 import React from "react";
 import './CommentSection.scss';
 import Comment from "../Comment/Comment";
-import InputField from "../Textarea/Textarea";
+import Textarea from "../Textarea/Textarea";
 import ProfilePic from "../ProfilePic/ProfilePic";
 import ProfilePicImage from '../../assets/images/Mohan-muruge.jpg';
-import Button from "../Button/Button";
+import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import add from '../../assets/icons/add_comment.svg';
 
 function CommentSection({loadComments}){
@@ -16,8 +16,8 @@ function CommentSection({loadComments}){
                 <div className="comment-section__add-comment-wrapper">
                     <ProfilePic image={ProfilePicImage} />
                     <div className="comment-section__add-comment">
-                        <InputField />
-                        <Button icon={add} text="comment" />
+                        <Textarea text="Join the conversation" label="Add a new comment" />
+                        <PrimaryButton icon={add} text="comment" />
                     </div>
                 </div>
             </div>

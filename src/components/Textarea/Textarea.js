@@ -1,13 +1,21 @@
 import React from "react";
 import './Textarea.scss';
 
-function Textarea(){
+function Textarea({ text, label, textareaHeight, value, onChange}){
 
     return(
-        <form className="comment-textarea">
-            <label className="comment-textarea__label">Join the conversation</label>
-            <textarea className="comment-textarea__textarea" placeholder="Add new comment" type="text" name="Comment" rows="1"></textarea>
-        </form>
+        <div className="comment-textarea">
+            <label className="comment-textarea__label">{text}</label>
+            <textarea 
+            className={`comment-textarea__textarea ${textareaHeight}`} 
+            placeholder={label} 
+            type="text" 
+            name="Comment" 
+            rows="1"
+            value={value}
+            onChange={onChange}
+            ></textarea>
+        </div>
     );
 }
 
