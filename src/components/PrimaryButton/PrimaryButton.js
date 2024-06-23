@@ -2,8 +2,8 @@ import React from 'react';
 import './PrimaryButton.scss';
 import { Link } from 'react-router-dom';
 
-function PrimaryButton({link, isLnkt, icon, text, iconOption, bntId }){
-    return isLnkt?(
+function PrimaryButton({link, isLink, icon, text, iconOption, bntId }){
+    return isLink?(
         <Link className='primary-button' to={link}>
             <img src={icon} alt="Button icon" className={`primary-button__icon brainflix_icon_lg ${iconOption}`}  />
             <p className='primary-button__text'>{text}</p>

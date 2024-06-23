@@ -6,44 +6,51 @@ import VideoPlayer from '../../components/VideoPlayer/VideoPlayer.js';
 import VideoDetails from '../../components/VideoDetails/VideoDetails.js';
 import CommentSection from '../../components/CommentSection/CommentSection.js';
 import NextVideo from '../../components/NextVideo/NextVideo.js';
+import { useParams, useNavigate } from 'react-router-dom';
 
 const apiUrl = "https://unit-3-project-api-0a5620414506.herokuapp.com/";
 const videoPath = "videos";
 const apiKey = "0fb16f10-b986-40a5-bdc1-70d836686b86";
 
 function Home() {
+  const { videoId } = useParams();
   const [currentVideo, setCurrentVideo] = useState(null);
   const [videoList, setVideoList] = useState([]);
+  const navigate = useNavigate();
+
+  const fetchVideoDetails = async (id) => {
+    try {
+      const response = await axios.get(`${apiUrl}${videoPath}/${id}?api_key=${apiKey}`);
+      setCurrentVideo(response.data);
+    } catch (error) {
+      return(error);
+    }
+  };
 
   useEffect(() => {
     const fetchVideos = async () => {
       try {
         const response = await axios.get(`${apiUrl}${videoPath}?api_key=${apiKey}`);
         setVideoList(response.data);
-        fetchVideoDetails(response.data[0].id);
+        if (!videoId) {
+          navigate(`/video/${response.data[0].id}`);
+        }
       } catch (error) {
-        throw(error);
+        return(error);
       }
     };
 
-    const fetchVideoDetails = async (id) => {
-      try {
-        const response = await axios.get(`${apiUrl}${videoPath}/${id}?api_key=${apiKey}`);
-        setCurrentVideo(response.data);
-      } catch (error) {
-        throw(error);
-      }
-    };
     fetchVideos();
   }, []);
 
-  const handleVideoSelect = async (id) => {
-    try {
-      const response = await axios.get(`${apiUrl}${videoPath}/${id}?api_key=${apiKey}`);
-      setCurrentVideo(response.data);
-    } catch (error) {
-      throw(error);
+  useEffect(() => {
+    if (videoId) {
+      fetchVideoDetails(videoId);
     }
+  }, [videoId]);
+
+  const handleVideoSelect = (id) => {
+    navigate(`/video/${id}`);
   };
 
   return (

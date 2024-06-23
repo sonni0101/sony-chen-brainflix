@@ -20,7 +20,12 @@ function Header(prop) {
                         className="header__profile-pic-mobile" 
                         />
                     </div>
-                    <PrimaryButton icon={ButtonIcon} text="Upload" link={"/VideoUploadPage"}/>
+                    <PrimaryButton 
+                    icon={ButtonIcon} 
+                    text="Upload" 
+                    link={"/VideoUploadPage"}
+                    isLink={true}
+                    />
                     <ProfilePic 
                     image={ProfilePicImage} 
                     className="header__profile-pic-desktop" 

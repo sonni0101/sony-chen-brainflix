@@ -15,7 +15,7 @@ function VideoUploadPage(){
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const formRef = useRef();
-
+    
     const handleFormSubmit = (event) =>{
         event.preventDefault();
 
@@ -61,7 +61,7 @@ function VideoUploadPage(){
                         text="Cancel" 
                         iconOption="upload-video__secondary-button--icon-none" 
                         type="cancel" 
-                        isLnkt={false}
+                        isLink={false}
                         bntId={"cancel"}
                         />
 
@@ -69,7 +69,7 @@ function VideoUploadPage(){
                         text="Publish" 
                         icon={ButtonIcon} 
                         type="submit" 
-                        isLnkt={false}
+                        isLink={false}
                         bntId={"submit"}
                         />
                     </div>

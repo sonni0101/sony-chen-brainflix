@@ -2,8 +2,8 @@ import React from 'react';
 import './SecondaryButton.scss';
 import { Link } from 'react-router-dom';
 
-function SecondaryButton({link, isLnkt, icon, text, iconOption, bntId }){
-    return isLnkt?(
+function SecondaryButton({link, isLink, icon, text, iconOption, bntId }){
+    return isLink?(
         <Link className='secondary-button' to={link}>
             <img src={icon} alt="Button icon" className={`secondary-button__icon brainflix_icon_lg ${iconOption}`} />
             <p className='secondary-button__text'>{text}</p>
