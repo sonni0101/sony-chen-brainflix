@@ -17,7 +17,7 @@ function Home() {
  };
 
   return (
-    <>
+    <main>
       <Header />
       <VideoPlayer 
         videoLink={currentVideo.image} 
@@ -41,7 +41,7 @@ function Home() {
             />
         </div>
       </div>
-    </>
+    </main>
   );
 }
 
