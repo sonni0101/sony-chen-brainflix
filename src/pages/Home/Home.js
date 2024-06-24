@@ -90,7 +90,7 @@ function Home() {
               <CommentSection
                 loadComments={currentVideo.comments}
                 onCommentSubmit={postComment}
-                onCommentDelete={deleteComment} // Pass the delete function
+                onCommentDelete={deleteComment}
               />
             </div>
             <div className='section-wrapper__right'>

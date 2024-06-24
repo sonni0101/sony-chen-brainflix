@@ -3,8 +3,7 @@ import logo from './logo.svg';
 import './App.scss';
 import Home from './pages/Home/Home';
 import VideoUploadPage from './pages/VideoUploadPage/VideoUploadPage';
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
