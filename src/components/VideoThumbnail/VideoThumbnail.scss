@@ -20,22 +20,5 @@
             flex: 1.5;
         }
     }
-
-    &__wrapper{
-        background-color: $background-grey;
-        border-radius: 0.25rem;
-        overflow: hidden;
-        aspect-ratio: 16/9;
-        min-height: 4rem;
-        flex: 1;
-
-        @include desktop{
-            border-bottom: 0.0625rem solid #e1e1e1;
-        }
-    }
-
-    &__image{
-        height: 100%;
-        // transform: translate(0, -13%); // center image in the container
-    }
 }
+

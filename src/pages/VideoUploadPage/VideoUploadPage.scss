@@ -1,0 +1,115 @@
+@import '../../styles/partials/breakpoints';
+
+.upload-video{
+    width: 100%;
+
+    &__section-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: $spacing-16;    
+        padding: $spacing-16;
+
+        @include desktop{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            max-width: $desktop-12-columns; 
+            margin: auto;
+            padding: 0;
+        }
+
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+            padding: 0 $spacing-36;
+        }
+    }
+
+    &__header{
+        padding: $spacing-8 0 $spacing-24 0;
+        width: 100%;
+
+        @include desktop{
+            padding: $spacing-40 0 $spacing-24 0;
+        }
+
+        @include tablet{
+            padding: $spacing-40 0 $spacing-24 0;
+        }
+    }
+
+    &__section-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-16;
+        width: 100%;
+
+        @include desktop{
+            flex-direction: row;
+            gap: $spacing-24;
+            border-top: 1px solid $divider;
+            border-bottom: 1px solid $divider;
+            padding: $spacing-24 0;
+        }
+
+        @include tablet{
+            flex-direction: column;
+            gap: $spacing-24;
+            border-top: 1px solid $divider;
+            border-bottom: 1px solid $divider;
+            padding: $spacing-24 0;
+        }
+    }
+
+    &__section-wrapper-left{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: $spacing-4;
+
+        @include tablet{
+            width: 50%;
+        }
+    }
+
+    &__section-wrapper-right{
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-24;
+        flex: 2;
+
+        &--textarea{
+            @include tablet{
+                height: 5.5rem;
+            }
+        }
+    }
+
+    &__section-wrapper-buttons{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: $spacing-16;
+        width: 100%;
+
+        @include desktop{
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+        @include tablet{
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+    }
+
+    &__secondary-button{
+        &--icon-none{
+            display: none;
+        }
+    }
+}

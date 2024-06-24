@@ -13,7 +13,8 @@
     flex-direction: row;
     align-items: center;
     gap: $spacing-16;
-    padding: 0 $spacing-36 0 $spacing-12;
+    padding: 0 $spacing-36;
+    position: relative;
 
     @include desktop{
         max-width: 9.375rem;
@@ -36,7 +37,6 @@
 
         @include desktop{
             @include desktop-tablet-button;
-            width: auto;
         }
 
         @include desktop{
