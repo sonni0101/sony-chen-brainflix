@@ -1,17 +1,17 @@
 import React from "react";
 import './InputField.scss';
 
-function InputField({ text, label, value, onChange, formError }) {
+function InputField(prop) {
     return (
         <div className={"input"}>
-            <label className="input__label">{text}</label>
+            <label className="input__label">{prop.text}</label>
             <input 
-                className={`input__textarea ${formError}`}
-                placeholder={label} 
+                className={`input__field ${prop.formError} ${prop.fieldHeight}`}
+                placeholder={prop.label} 
                 type="text" 
                 name="Input" 
-                value={value}
-                onChange={onChange}
+                value={prop.value}
+                onChange={prop.onChange}
             />
         </div>
     );

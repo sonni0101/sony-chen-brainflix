@@ -154,6 +154,12 @@ textarea{
     width: 1.5rem;
 }
 
+.brainflix_icon_button{
+    width: 1.5rem;
+    position: absolute;
+    left: 0.5rem;
+}
+
 .brainflix_icon{
     width: 1rem;
 
@@ -184,4 +190,20 @@ textarea{
 
 .error-border {
     border: 2px solid $error;
+}
+
+.max-width{
+    width: 100%;
+
+    @include desktop{
+        max-width: 9.375rem;
+    }
+
+    @include tablet(){
+        max-width: 9.375rem;
+    }
+}
+
+.min-height{
+    height: 2.5rem;
 }

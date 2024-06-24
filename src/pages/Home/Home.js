@@ -10,7 +10,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 
 const apiUrl = "https://unit-3-project-api-0a5620414506.herokuapp.com/";
 const videoPath = "videos";
-const apiKey = "532b182b-fb9a-4908-8b09-09714f6a1cbd";
+const apiKey = "3e45bc8a-4adf-4374-80ed-ca94b1c680cf";
 
 function Home() {
   const { videoId } = useParams();

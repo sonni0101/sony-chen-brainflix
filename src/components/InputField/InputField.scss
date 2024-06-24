@@ -10,7 +10,7 @@
         @include label-style;
     }
 
-    &__textarea{
+    &__field{
         width: 100%;
         padding: $spacing-12;
         height: calc(1.5em * 4);
@@ -25,7 +25,7 @@
         }
 
         &--erro{
-            border: 1px solid red;
+            border: 1px solid $error;
         }
     }
 }

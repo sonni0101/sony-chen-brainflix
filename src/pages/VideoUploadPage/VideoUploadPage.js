@@ -29,7 +29,7 @@ function VideoUploadPage() {
             alert("Video uploaded successfully");
             navigate('/');
         } else {
-            alert("empty");
+            alert("Form cannot be empty!");
         }
     };
 
@@ -45,6 +45,11 @@ function VideoUploadPage() {
         if (descriptionError){
             setDescriptionError(false);
         }
+    };
+
+    const handleCancel = () => {
+        setTitle("");
+        setDescription("");
     };
 
     return (
@@ -67,6 +72,7 @@ function VideoUploadPage() {
                                 value={title}
                                 onChange={handleTitleChange}
                                 formError={titleError ? "error-border" : ""}
+                                fieldHeight={"min-height"}
                             />
 
                             <Textarea 
@@ -84,9 +90,10 @@ function VideoUploadPage() {
                         <SecondaryButton 
                             text="Cancel" 
                             iconOption="upload-video__secondary-button--icon-none" 
-                            type="cancel" 
+                            type="button" 
                             isLink={false}
                             bntId={"cancel"}
+                            onClick={handleCancel}
                         />
 
                         <PrimaryButton 

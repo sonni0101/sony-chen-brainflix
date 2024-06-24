@@ -32,8 +32,9 @@ function CommentSection({ loadComments, onCommentSubmit }) {
               value={comment}
               onChange={(e) => setComment(e.target.value)}
               required
+              fieldHeight={"min-height"}
             />
-            <PrimaryButton icon={add} text="comment" />
+            <PrimaryButton icon={add} text="comment" maxWidth="max-width" />
           </form>
         </div>
       </div>
