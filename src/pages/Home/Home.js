@@ -23,7 +23,7 @@ function Home() {
       const response = await axios.get(`${apiUrl}${videoPath}/${id}?api_key=${apiKey}`);
       setCurrentVideo(response.data);
     } catch (error) {
-      return(error);
+      throw error;
     }
   };
 
@@ -32,16 +32,16 @@ function Home() {
       try {
         const response = await axios.get(`${apiUrl}${videoPath}?api_key=${apiKey}`);
         setVideoList(response.data);
-        if (!videoId) {
-          navigate(`/video/${response.data[0].id}`);
+        if (!videoId && response.data.length > 0) {
+          setCurrentVideo(response.data[0]);
         }
       } catch (error) {
-        return(error);
+        throw error;
       }
     };
 
     fetchVideos();
-  }, []);
+  }, [videoId]);
 
   useEffect(() => {
     if (videoId) {
@@ -54,14 +54,11 @@ function Home() {
   };
 
   return (
-    <>
+    <main>
       <Header />
       {currentVideo && (
         <>
-          <VideoPlayer 
-            videoLink={currentVideo.image} 
-            duration={currentVideo.duration}
-          />
+          <VideoPlayer videoLink={currentVideo.image} duration={currentVideo.duration} />
           <div className='section-wrapper'>
             <div className='section-wrapper__left'>
               <VideoDetails
@@ -70,13 +67,12 @@ function Home() {
                 uploadDate={new Date(currentVideo.timestamp).toLocaleDateString()}
                 views={currentVideo.views}
                 likes={currentVideo.likes}
-                description={currentVideo.description} />
-              {Array.isArray(currentVideo.comments) && (
-                <CommentSection loadComments={currentVideo.comments} />
-              )}
+                description={currentVideo.description}
+              />
+             <CommentSection loadComments={currentVideo.comments} />
             </div>
             <div className='section-wrapper__right'>
-              <NextVideo 
+              <NextVideo
                 videos={videoList.filter(video => video.id !== currentVideo.id)}
                 onVideoSelect={handleVideoSelect}
               />
@@ -84,7 +80,7 @@ function Home() {
           </div>
         </>
       )}
-    </>
+    </main>
   );
 }
 

@@ -15,10 +15,10 @@ function CommentSection({loadComments}){
                 <h3 className="comment-section__comment-count"> {loadComments.length} Comments</h3>
                 <div className="comment-section__add-comment-wrapper">
                     <ProfilePic image={ProfilePicImage} />
-                    <div className="comment-section__add-comment">
+                    <form className="comment-section__add-comment">
                         <Textarea text="Join the conversation" label="Add a new comment" />
                         <PrimaryButton icon={add} text="comment" />
-                    </div>
+                    </form>
                 </div>
             </div>
             {loadComments.map(comment =>(
