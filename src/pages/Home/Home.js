@@ -10,7 +10,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 
 const apiUrl = "https://unit-3-project-api-0a5620414506.herokuapp.com/";
 const videoPath = "videos";
-const apiKey = "58207631-9064-44af-bda0-6ea974955a97";
+const apiKey = "0a112306-6e99-464e-a9f1-b07532bc2c79";
 
 function Home() {
   const { videoId } = useParams();
@@ -30,6 +30,15 @@ function Home() {
   const postComment = async (comment) => {
     try {
       await axios.post(`${apiUrl}${videoPath}/${videoId}/comments?api_key=${apiKey}`, comment);
+      fetchVideoDetails(videoId);
+    } catch (error) {
+      throw(error);
+    }
+  };
+
+  const deleteComment = async (commentId) => {
+    try {
+      await axios.delete(`${apiUrl}${videoPath}/${videoId}/comments/${commentId}?api_key=${apiKey}`);
       fetchVideoDetails(videoId);
     } catch (error) {
       throw(error);
@@ -81,6 +90,7 @@ function Home() {
               <CommentSection
                 loadComments={currentVideo.comments}
                 onCommentSubmit={postComment}
+                onCommentDelete={deleteComment} // Pass the delete function
               />
             </div>
             <div className='section-wrapper__right'>

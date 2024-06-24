@@ -6,8 +6,9 @@ import ProfilePic from "../ProfilePic/ProfilePic";
 import ProfilePicImage from '../../assets/images/Mohan-muruge.jpg';
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import add from '../../assets/icons/add_comment.svg';
+// import deleteIcon from '../../assets/icons/delete_comment.svg'; // Comment out if the file doesn't exist
 
-function CommentSection({ loadComments, onCommentSubmit }) {
+function CommentSection({ loadComments, onCommentSubmit, onCommentDelete }) {
   const [name, setName] = useState('');
   const [comment, setComment] = useState('');
 
@@ -17,6 +18,14 @@ function CommentSection({ loadComments, onCommentSubmit }) {
     onCommentSubmit(newComment);
     setName('');
     setComment('');
+  };
+
+  const handleDelete = async (commentId) => {
+    try {
+      await onCommentDelete(commentId);
+    } catch (error) {
+      throw(error);
+    }
   };
 
   return (
@@ -39,12 +48,14 @@ function CommentSection({ loadComments, onCommentSubmit }) {
         </div>
       </div>
       {loadComments.map(comment => (
-        <Comment
-          key={comment.id}
-          commemtor={comment.name}
-          commentDate={new Date(comment.timestamp).toLocaleDateString()}
-          comment={comment.comment}
-        />
+        <div key={comment.id} className="comment-section__comment-item">
+          <Comment
+            commemtor={comment.name}
+            commentDate={new Date(comment.timestamp).toLocaleDateString()}
+            comment={comment.comment}
+            onClick={() => handleDelete(comment.id)}
+          />
+        </div>
       ))}
     </section>
   );
