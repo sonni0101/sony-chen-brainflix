@@ -14,7 +14,7 @@ function CommentSection({ loadComments, onCommentSubmit, onCommentDelete }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const newComment = { name, comment };
+    const newComment = { name:"Sony", comment };
     onCommentSubmit(newComment);
     setName('');
     setComment('');
