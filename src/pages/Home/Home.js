@@ -10,7 +10,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 
 const apiUrl = "https://unit-3-project-api-0a5620414506.herokuapp.com/";
 const videoPath = "videos";
-const apiKey = "0fb16f10-b986-40a5-bdc1-70d836686b86";
+const apiKey = "532b182b-fb9a-4908-8b09-09714f6a1cbd";
 
 function Home() {
   const { videoId } = useParams();
@@ -23,7 +23,16 @@ function Home() {
       const response = await axios.get(`${apiUrl}${videoPath}/${id}?api_key=${apiKey}`);
       setCurrentVideo(response.data);
     } catch (error) {
-      throw error;
+      throw(error);
+    }
+  };
+
+  const postComment = async (comment) => {
+    try {
+      await axios.post(`${apiUrl}${videoPath}/${videoId}/comments?api_key=${apiKey}`, comment);
+      fetchVideoDetails(videoId);
+    } catch (error) {
+      throw(error);
     }
   };
 
@@ -33,15 +42,15 @@ function Home() {
         const response = await axios.get(`${apiUrl}${videoPath}?api_key=${apiKey}`);
         setVideoList(response.data);
         if (!videoId && response.data.length > 0) {
-          setCurrentVideo(response.data[0]);
+          navigate(`/video/${response.data[0].id}`);
         }
       } catch (error) {
-        throw error;
+        throw(error);
       }
     };
 
     fetchVideos();
-  }, [videoId]);
+  }, [videoId, navigate]);
 
   useEffect(() => {
     if (videoId) {
@@ -69,7 +78,10 @@ function Home() {
                 likes={currentVideo.likes}
                 description={currentVideo.description}
               />
-             <CommentSection loadComments={currentVideo.comments} />
+              <CommentSection
+                loadComments={currentVideo.comments}
+                onCommentSubmit={postComment}
+              />
             </div>
             <div className='section-wrapper__right'>
               <NextVideo

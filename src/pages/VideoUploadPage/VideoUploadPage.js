@@ -9,22 +9,45 @@ import ImagePreview from '../../assets/images/Upload-video-preview.jpg';
 import PrimaryButton from "../../components/PrimaryButton/PrimaryButton";
 import SecondaryButton from "../../components/SecondaryButton/SecondaryButton";
 import ButtonIcon from '../../assets/icons/publish.svg';
+import { useNavigate } from "react-router-dom";
 
-
-function VideoUploadPage(){
+function VideoUploadPage() {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
+    const [titleError, setTitleError] = useState(false);
+    const [descriptionError, setDescriptionError] = useState(false);
     const formRef = useRef();
-    
-    const handleFormSubmit = (event) =>{
+    const navigate = useNavigate();
+
+    const handleFormSubmit = (event) => {
         event.preventDefault();
 
-        if (title && description){
-            alert("Video upload succesfully");
+        setTitleError(!title);
+        setDescriptionError(!description);
+
+        if (title && description) {
+            alert("Video uploaded successfully");
+            navigate('/');
+        } else {
+            alert("empty");
         }
     };
 
-    return(
+    const handleTitleChange = (event) => {
+        setTitle(event.target.value);
+        if (titleError){
+            setTitleError(false);
+        }
+    };
+
+    const handleDescriptionChange = (event) => {
+        setDescription(event.target.value);
+        if (descriptionError){
+            setDescriptionError(false);
+        }
+    };
+
+    return (
         <main>
             <Header dividerOption="divider-bottom" />
             <section className="upload-video">
@@ -39,38 +62,39 @@ function VideoUploadPage(){
 
                         <div className="upload-video__section-wrapper-right">
                             <InputField 
-                            label="Title your video" 
-                            text="Add a video to your title" 
-                            value={title}
-                            onChange={(event) => setTitle(event.target.value)}
-                            
+                                label="Title your video" 
+                                text="Add a title to your video" 
+                                value={title}
+                                onChange={handleTitleChange}
+                                formError={titleError ? "error-border" : ""}
                             />
 
                             <Textarea 
-                            label="Add a video description" 
-                            text="Add a description to your title" 
-                            textareaHeight="upload-video__section-wrapper-right--textarea" 
-                            value={description}
-                            onChange={(event) => setDescription(event.target.value)} 
+                                label="Add a video description" 
+                                text="Add a description to your video" 
+                                textareaHeight="upload-video__section-wrapper-right--textarea" 
+                                value={description}
+                                onChange={handleDescriptionChange}
+                                formError={descriptionError ? "error-border" : ""}
                             />
                         </div>
                     </div>
 
                     <div className="upload-video__section-wrapper-buttons">
                         <SecondaryButton 
-                        text="Cancel" 
-                        iconOption="upload-video__secondary-button--icon-none" 
-                        type="cancel" 
-                        isLink={false}
-                        bntId={"cancel"}
+                            text="Cancel" 
+                            iconOption="upload-video__secondary-button--icon-none" 
+                            type="cancel" 
+                            isLink={false}
+                            bntId={"cancel"}
                         />
 
                         <PrimaryButton 
-                        text="Publish" 
-                        icon={ButtonIcon} 
-                        type="submit" 
-                        isLink={false}
-                        bntId={"submit"}
+                            text="Publish" 
+                            icon={ButtonIcon} 
+                            type="submit" 
+                            isLink={false}
+                            bntId={"submit"}
                         />
                     </div>
                 </form>
@@ -80,4 +104,3 @@ function VideoUploadPage(){
 }
 
 export default VideoUploadPage;
-

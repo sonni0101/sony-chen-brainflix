@@ -23,5 +23,9 @@
         @include tablet{
             height: auto;
         }
+
+        &--erro{
+            border: 1px solid red;
+        }
     }
 }
