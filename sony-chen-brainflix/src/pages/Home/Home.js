@@ -8,9 +8,8 @@ import CommentSection from '../../components/CommentSection/CommentSection.js';
 import NextVideo from '../../components/NextVideo/NextVideo.js';
 import { useParams, useNavigate } from 'react-router-dom';
 
-const apiUrl = "https://unit-3-project-api-0a5620414506.herokuapp.com/";
-const videoPath = "videos";
-const apiKey = "0a112306-6e99-464e-a9f1-b07532bc2c79";
+const apiUrl = 'http://localhost:8080';
+const videoPath = "/videos";
 
 function Home() {
   const { videoId } = useParams();
@@ -20,41 +19,41 @@ function Home() {
 
   const fetchVideoDetails = async (id) => {
     try {
-      const response = await axios.get(`${apiUrl}${videoPath}/${id}?api_key=${apiKey}`);
+      const response = await axios.get(`${apiUrl}${videoPath}/${id}`);
       setCurrentVideo(response.data);
     } catch (error) {
-      throw(error);
+      console.error('Error fetching video details:', error);
     }
   };
 
   const postComment = async (comment) => {
     try {
-      await axios.post(`${apiUrl}${videoPath}/${videoId}/comments?api_key=${apiKey}`, comment);
+      await axios.post(`${apiUrl}${videoPath}/${videoId}/comments`, comment);
       fetchVideoDetails(videoId);
     } catch (error) {
-      throw(error);
+      console.error('Error posting comment:', error);
     }
   };
 
   const deleteComment = async (commentId) => {
     try {
-      await axios.delete(`${apiUrl}${videoPath}/${videoId}/comments/${commentId}?api_key=${apiKey}`);
+      await axios.delete(`${apiUrl}${videoPath}/${videoId}/comments/${commentId}`);
       fetchVideoDetails(videoId);
     } catch (error) {
-      throw(error);
+      console.error('Error deleting comment:', error);
     }
   };
 
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const response = await axios.get(`${apiUrl}${videoPath}?api_key=${apiKey}`);
+        const response = await axios.get(`${apiUrl}${videoPath}`);
         setVideoList(response.data);
         if (!videoId && response.data.length > 0) {
           navigate(`/video/${response.data[0].id}`);
         }
       } catch (error) {
-        throw(error);
+        console.error('Error fetching videos:', error);
       }
     };
 
