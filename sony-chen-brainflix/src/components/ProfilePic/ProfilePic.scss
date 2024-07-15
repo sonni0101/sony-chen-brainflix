@@ -1,0 +1,25 @@
+@import '../../styles/global.scss';
+
+.profile-pic{
+    min-width: 2.25rem;
+    max-width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    overflow: hidden;
+
+    @include desktop{
+        min-width: 2.5rem;
+        max-width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    @include tablet{
+        min-width: 2.5rem;
+        max-width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    &__image{
+        height: 2.5rem;    
+    }
+}

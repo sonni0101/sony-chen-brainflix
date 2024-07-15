@@ -1,0 +1,29 @@
+@import '../../styles/global.scss';
+
+.delete-button{
+    border: none;
+    outline: none;
+    text-decoration: none;
+    background: transparent;
+    color: $error;
+    cursor: pointer;
+
+    &:hover{
+        color: $error-hover;
+    }
+
+    &__text{
+        text-align: center;
+        width: 100%;
+        text-transform: uppercase;
+        font-weight: 700 !important;
+
+        @include desktop{
+            @include desktop-tablet-button;
+        }
+
+        @include desktop{
+            @include desktop-tablet-button;
+        }
+    }
+}
