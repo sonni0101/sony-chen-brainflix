@@ -204,5 +204,13 @@ textarea{
 }
 
 .min-height{
-    height: 2.5rem;
+    height: 2.25rem;
+
+    @include desktop{
+        height: 2.5rem;
+    }
+
+    @include tablet{
+        height: 2.5rem;
+    }
 }

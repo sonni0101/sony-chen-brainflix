@@ -13,14 +13,15 @@
     flex-direction: row;
     align-items: center;
     gap: $spacing-16;
-    padding: 0 $spacing-36;
     position: relative;
 
     @include desktop{
+        min-width: 9.375rem;
         max-width: 9.375rem;
     }
 
     @include tablet{
+        min-width: 9.375rem;
         max-width: 9.375rem;
     }
 

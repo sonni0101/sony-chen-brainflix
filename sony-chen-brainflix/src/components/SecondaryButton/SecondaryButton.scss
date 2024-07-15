@@ -17,12 +17,13 @@
     position: relative;
 
     @include desktop{
+        min-width: 9.375rem;
         max-width: 9.375rem;
     }
 
     @include tablet{
+        min-width: 9.375rem;
         max-width: 9.375rem;
-
     }
 
     &:hover{

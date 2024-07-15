@@ -75,10 +75,9 @@ function VideoUploadPage() {
         }
     };
 
-    const handleCancel = () => {
-        setTitle("");
-        setName("");
-        setDescription("");
+    const handleCancel = (event) => {
+        event.preventDefault();
+        navigate('/');
     };
 
     return (
@@ -106,7 +105,7 @@ function VideoUploadPage() {
                             />
 
                             <InputField 
-                                label="Author name" 
+                                label="Author's name" 
                                 text="Add an author name" 
                                 value={name}
                                 onChange={handleNameChange}
@@ -130,7 +129,7 @@ function VideoUploadPage() {
                         <SecondaryButton 
                             text="Cancel" 
                             iconOption="upload-video__secondary-button--icon-none" 
-                            type="button" 
+                            bntType="button"
                             isLink={false}
                             bntId={"cancel"}
                             onClick={handleCancel}

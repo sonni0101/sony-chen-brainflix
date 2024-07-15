@@ -38,7 +38,7 @@ router.post('/videos', (req, res) =>{
         id: Date.now.toString(),
         title: req.body.title,
         channel: req.body.channel,
-        image: "https://res.cloudinary.com/dhifyp04n/image/upload/v1720998153/Upload-video-preview_wr3prc.jpg",
+        image: "http://localhost:8080/images/upload-video-preview.jpg",
         description: req.body.description,
         views: "0",
         likes: "0",

@@ -6,17 +6,14 @@ import ProfilePic from "../ProfilePic/ProfilePic";
 import ProfilePicImage from '../../assets/images/Mohan-muruge.jpg';
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import add from '../../assets/icons/add_comment.svg';
-// import deleteIcon from '../../assets/icons/delete_comment.svg'; // Comment out if the file doesn't exist
 
 function CommentSection({ loadComments, onCommentSubmit, onCommentDelete }) {
-  const [name, setName] = useState('');
   const [comment, setComment] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const newComment = { name:"Sony", comment };
     onCommentSubmit(newComment);
-    setName('');
     setComment('');
   };
 

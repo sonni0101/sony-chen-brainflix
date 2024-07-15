@@ -5,6 +5,7 @@
     flex-direction: row;
     padding: $spacing-16 0;
     border-top: 1px solid $divider;
+    gap: $spacing-24;
 
     @include desktop{
         padding: $spacing-24 $spacing-24 $spacing-24 $spacing-8;
