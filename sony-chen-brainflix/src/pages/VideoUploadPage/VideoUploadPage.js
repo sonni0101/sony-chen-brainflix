@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import axios from "axios";
 import './VideoUploadPage.scss';
 import Header from "../../components/Header/Header";
 import Image from "../../components/Image/Image";
@@ -13,21 +14,41 @@ import { useNavigate } from "react-router-dom";
 
 function VideoUploadPage() {
     const [title, setTitle] = useState("");
+    const [name, setName] = useState("");
     const [description, setDescription] = useState("");
     const [titleError, setTitleError] = useState(false);
+    const [nameError, setNameError] = useState(false);
     const [descriptionError, setDescriptionError] = useState(false);
     const formRef = useRef();
     const navigate = useNavigate();
+    const apiUrl = 'http://localhost:8080';
+    const videoPath = "/videos";
 
-    const handleFormSubmit = (event) => {
+    const handleFormSubmit = async (event) => {
         event.preventDefault();
 
         setTitleError(!title);
+        setNameError(!name);
         setDescriptionError(!description);
 
-        if (title && description) {
-            alert("Video uploaded successfully");
-            navigate('/');
+        if (title && description && name) {
+            try{
+                const response = await axios.post(`${apiUrl}${videoPath}`, {
+                    title,
+                    channel: name,
+                    description
+                });
+
+                if (response.status === 201){
+                    alert("Video uploaded succesfully");
+                    navigate('/');
+                } else {
+                    alert("Failed to upload video");
+                }
+
+            } catch (error){
+                alert("Video uploaded successfully");
+            }
         } else {
             alert("Form cannot be empty!");
         }
@@ -40,6 +61,13 @@ function VideoUploadPage() {
         }
     };
 
+    const handleNameChange = (event) => {
+        setName(event.target.value);
+        if (nameError){
+            setNameError(false);
+        }
+    };
+
     const handleDescriptionChange = (event) => {
         setDescription(event.target.value);
         if (descriptionError){
@@ -49,6 +77,7 @@ function VideoUploadPage() {
 
     const handleCancel = () => {
         setTitle("");
+        setName("");
         setDescription("");
     };
 
@@ -66,6 +95,7 @@ function VideoUploadPage() {
                         </div>
 
                         <div className="upload-video__section-wrapper-right">
+                            <div className="upload-video__upper-field">
                             <InputField 
                                 label="Title your video" 
                                 text="Add a title to your video" 
@@ -74,6 +104,16 @@ function VideoUploadPage() {
                                 formError={titleError ? "error-border" : ""}
                                 fieldHeight={"min-height"}
                             />
+
+                            <InputField 
+                                label="Author name" 
+                                text="Add an author name" 
+                                value={name}
+                                onChange={handleNameChange}
+                                formError={nameError ? "error-border" : ""}
+                                fieldHeight={"min-height"}
+                            />
+                            </div>
 
                             <Textarea 
                                 label="Add a video description" 

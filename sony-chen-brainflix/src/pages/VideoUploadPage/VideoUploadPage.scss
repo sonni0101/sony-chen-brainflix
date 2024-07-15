@@ -90,6 +90,22 @@
         }
     }
 
+    &__upper-field{
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-24;
+
+        @include desktop{
+            flex-direction: row;
+            gap: $spacing-16;
+        }
+
+        @include tablet{
+            flex-direction: row;
+            gap: $spacing-16;
+        }
+    }
+
     &__section-wrapper-buttons{
         display: flex;
         flex-direction: column-reverse;
