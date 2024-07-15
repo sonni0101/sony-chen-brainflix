@@ -1,0 +1,11 @@
+@import '../../styles/global.scss';
+
+.brainflix-logo{
+    display: flex;
+    align-items: center;
+    
+    &__logo{
+        width: 7.5rem;
+        max-height: 1.5625rem;
+    }
+}

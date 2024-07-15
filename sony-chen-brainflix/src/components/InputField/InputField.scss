@@ -1,0 +1,31 @@
+@import '../../styles/global.scss';
+
+.input{
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-4;
+    width: 100%;
+
+    &__label{
+        @include label-style;
+    }
+
+    &__field{
+        width: 100%;
+        padding: $spacing-12;
+        height: calc(1.5em * 4);
+        box-sizing: border-box;
+
+        @include desktop{
+            height: auto;
+        }
+
+        @include tablet{
+            height: auto;
+        }
+
+        &--erro{
+            border: 1px solid $error;
+        }
+    }
+}

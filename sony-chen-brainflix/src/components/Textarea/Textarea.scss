@@ -1,0 +1,38 @@
+@import '../../styles/global.scss';
+
+.comment-textarea{
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-4;
+    width: 100%;
+
+
+    @include desktop{
+        height: 100%;
+    }
+
+    @include tablet{
+        height: 100%;
+    }
+
+    &__label{
+        @include label-style;
+    }
+
+    &__textarea{
+        width: 100%;
+        padding: $spacing-12;
+        height: calc(1.5em * 4);
+        box-sizing: border-box;
+
+        @include desktop{
+            min-height: 2.5rem;
+            height: 100%;
+        }
+
+        @include tablet{
+            min-height: 2.5rem;
+            height: 100%;
+        }
+    }
+}
